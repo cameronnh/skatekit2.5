@@ -1,5 +1,5 @@
 repeat
-    task.wait(.01)
+    task.wait(.1)
 until workspace:GetAttribute("SkateKitInitalized")
 
 local ServerScriptService = game:GetService("ServerScriptService")
@@ -11,7 +11,13 @@ for _: number, script: ModuleScript? in ServerScriptService.Services:GetChildren
         continue
     end
 
+    if script.Name == "PlayerNCharService" then
+        continue
+    end
+
     require(script)
 end
+
+require(ServerScriptService.Services.PlayerNCharService) --load last
 
 Knit.Start():catch(warn)
