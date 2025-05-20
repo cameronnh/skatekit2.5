@@ -1,0 +1,14 @@
+{
+	"name": "Skate Kit 2.5",
+	"tree": {
+		"$className": "DataModel",
+
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"$ignoreUnknownInstances": true,
+			"Source": {
+				"$path": "src"
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+[package]
+name = "camer/skatekit2andahalf"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Knit = "sleitnick/knit@^1"
+Timer = "sleitnick/timer@1.1.0"
+Dumpster = "kinqandi/dumpster@0.3.2"
+Signal = "sleitnick/signal@1.5.0"
+Promise = "evaera/promise@4.0.0"
