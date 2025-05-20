@@ -7,16 +7,16 @@ local TeleportService = game:GetService("TeleportService")
 
 --PACKAGES---------------------------------------------------------------------------
 
-local Knit = require(ReplicatedStorage.Knit)
-local Promise = require(ReplicatedStorage.Utils.Promise)
-local Signal = require(ReplicatedStorage.Utils.Signal)
+local Knit = require(ReplicatedStorage.Knit) ---@module Knit
+local Promise = require(ReplicatedStorage.Utils.Promise) ---@module Promise
+local Signal = require(ReplicatedStorage.Utils.Signal) ---@module Signal
 
 --PROFILE/REPLICA SERVICE------------------------------------------------------------
 
-local ProfileService = require(ReplicatedStorage.MadworksModules.ProfileService)
-local ReplicaService = require(ReplicatedStorage.MadworksModules.ReplicaService)
-local SaveStructure: {[string]: any} = require(ReplicatedStorage.Data.SaveStructure)
-local DataStoreNames = require(ReplicatedStorage.Data.DataStoreNames)
+local ProfileService = require(ReplicatedStorage.MadworksModules.ProfileService) ---@module ProfileService
+local ReplicaService = require(ReplicatedStorage.MadworksModules.ReplicaService) ---@module ReplicaService
+local SaveStructure: {[string]: any} = require(ReplicatedStorage.Data.SaveStructure) ---@module SaveStructure
+local DataStoreNames = require(ReplicatedStorage.Data.DataStoreNames) ---@module DataStoreNames
 
 --CONSTANTS--------------------------------------------------------------------------
 
@@ -29,7 +29,6 @@ local OFFLINE_CACHED_KEYS: {string} = {
 
 local DataService = Knit.CreateService{
 	Name = "DataService",
-    Client = {},
 	DataLoaded = Signal.new()
 }
 

@@ -5,15 +5,14 @@ local Players = game:GetService("Players")
 
 --PACKAGES---------------------------------------------------------------------------
 
-local Knit = require(ReplicatedStorage.Knit)
-local Signal = require(ReplicatedStorage.Utils.Signal)
-local Dumpster = require(ReplicatedStorage.Utils.Dumpster)
+local Knit = require(ReplicatedStorage.Knit) ---@module Knit
+local Signal = require(ReplicatedStorage.Utils.Signal) ---@module Signal
+local Dumpster = require(ReplicatedStorage.Utils.Dumpster) ---@module Dumpster
 
 --FIELDS-----------------------------------------------------------------------------
 
 local PlayerNCharService = Knit.CreateService{
     Name = "PlayerNCharService",
-    Client = {},
     PlayerAdded = Signal.new(),
     CharacterAdded = Signal.new()
 }

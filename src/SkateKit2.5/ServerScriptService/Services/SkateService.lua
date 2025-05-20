@@ -5,7 +5,7 @@ local Players = game:GetService("Players")
 
 --DEPENDENCIES-----------------------------------------------------------------------
 
-local Knit = require(ReplicatedStorage.Knit)
+local Knit = require(ReplicatedStorage.Knit) ---@module Knit
 
 --CONSTANTS--------------------------------------------------------------------------
 

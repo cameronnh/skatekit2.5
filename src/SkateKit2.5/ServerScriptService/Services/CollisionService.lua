@@ -5,13 +5,12 @@ local PhysicsService = game:GetService("PhysicsService")
 
 --DEPENDENCIES-----------------------------------------------------------------------
 
-local Knit = require(ReplicatedStorage.Knit)
+local Knit = require(ReplicatedStorage.Knit) ---@module Knit
 
 --FIELDS-----------------------------------------------------------------------------
 
 local CollisionService = Knit.CreateService{
     Name = "CollisionService",
-    Client = {},
 }
 
 local PlayerNCharService
