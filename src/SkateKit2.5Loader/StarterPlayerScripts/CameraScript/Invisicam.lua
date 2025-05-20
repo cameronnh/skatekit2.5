@@ -134,7 +134,11 @@ end
 
 local function OnCharacterAdded(character)
 	Character = character
-	Torso = Character:WaitForChild('Torso')
+	Torso = Character:WaitForChild('Torso', 10)
+
+	if not Torso then
+		Torso = Character:WaitForChild('UpperTorso', 10)
+	end
 
 	TrackedLimbs = {}
 	for _, child in pairs(Character:GetChildren()) do
