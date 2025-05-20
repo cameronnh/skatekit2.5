@@ -57,11 +57,13 @@ end
 --KNIT LIFETIME METHODS--------------------------------------------------------------
 
 function PlayerNCharService:KnitStart(): ()
-    for _: number, player: Player in Players:GetPlayers() do
-        playerAdded(player)
-    end
+    task.defer(function()
+        for _: number, player: Player in Players:GetPlayers() do
+            playerAdded(player)
+        end
 
-    Players.PlayerAdded:Connect(playerAdded)
+        Players.PlayerAdded:Connect(playerAdded)
+    end)
 end
 
 --PUBLIC FUNCTIONS--------------------------------------------------------------
