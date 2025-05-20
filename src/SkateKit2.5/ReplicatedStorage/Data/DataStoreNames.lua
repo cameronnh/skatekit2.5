@@ -1,5 +1,5 @@
-local LIVE_MAIN_KEY: number = 39
-local STUDIO_MAIN_KEY: number = 49
+local LIVE_MAIN_KEY: number = 1
+local STUDIO_MAIN_KEY: number = 1
 
 return {
     PlayerData_Live = `Profiles_{LIVE_MAIN_KEY}`,

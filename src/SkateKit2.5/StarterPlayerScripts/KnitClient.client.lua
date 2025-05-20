@@ -1,3 +1,7 @@
+repeat
+    task.wait(.1)
+until workspace:GetAttribute("SkateKitInitalized")
+
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local StarterPlayer = game:GetService("StarterPlayer")
 local StarterPlayerScripts = StarterPlayer.StarterPlayerScripts
