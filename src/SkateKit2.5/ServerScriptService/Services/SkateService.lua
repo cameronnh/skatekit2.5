@@ -90,17 +90,9 @@ function SkateService.Client:SpawnSkateboard(player: Player)
     local currentLeans: string = DataService:GetValueFromKey(player, "LeanType") or "new"
 
     --doing this so theres always a skateboard ready
-    local skateboard: Model
-    if player:GetAttribute("GiveExperimentalBoards") then
-        print(`Giving {player.DisplayName} the experimental board`)
-        skateboard = ReplicatedStorage.Assets.BoardsExperimental:FindFirstChild("Skateboard")
-        local skateboardClone: Model = skateboard:Clone()
-        skateboardClone.Parent = ReplicatedStorage.Assets.BoardsExperimental
-    else
-        skateboard = ReplicatedStorage.Assets.Boards:FindFirstChild("Skateboard")
-        local skateboardClone: Model = skateboard:Clone()
-        skateboardClone.Parent = ReplicatedStorage.Assets.Boards
-    end
+    local skateboard: Model = ReplicatedStorage.Assets.Boards:FindFirstChild("Skateboard")
+    local skateboardClone: Model = skateboard:Clone()
+    skateboardClone.Parent = ReplicatedStorage.Assets.Boards
 
     --adds to table
     if self.Server.PlayerSkateboards[player] then
@@ -144,5 +136,7 @@ end
 --PUBLIC METHODS---------------------------------------------------------------------
 
 --PRIVATE METHODS--------------------------------------------------------------------
+
+
 
 return SkateService
