@@ -68,6 +68,8 @@ function DataService:KnitStart(): ()
 			OfflineCache[key][player.UserId] = nil
 		end
 	end)
+
+	workspace:SetAttribute("DataServiceInitalized", true)
 end
 
 --PUBLIC FUNCTIONS-------------------------------------------------------------------
